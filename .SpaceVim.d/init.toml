@@ -1,0 +1,84 @@
+#=============================================================================
+# dark_powered.toml --- dark powered configuration example for SpaceVim
+# Copyright (c) 2016-2017 Wang Shidong & Contributors
+# Author: Wang Shidong < wsdjeg at 163.com >
+# URL: https://spacevim.org
+# License: GPLv3
+#=============================================================================
+
+# All SpaceVim option below [option] section
+[options]
+    # set spacevim theme. by default colorscheme layer is not loaded,
+    # if you want to use more colorscheme, please load the colorscheme
+    # layer
+    colorscheme = "molokai"
+    background = "dark"
+    # Disable guicolors in basic mode, many terminal do not support 24bit
+    # true colors
+    enable_guicolors = true
+    # Disable statusline separator, if you want to use other value, please
+    # install nerd fonts
+    statusline_separator = "arrow"
+    statusline_inactive_separator = "arrow"
+    buffer_index_type = 4
+    enable_tabline_filetype_icon = true
+    enable_statusline_display_mode = false
+    enable_ycm = 1
+    enable_ale = 0
+    enable_neomake = 1
+    lint_on_the_fly = 1
+    default_indent = 4
+    relativenumber = 0
+    bootstrap_before = "myspacevim#before"
+    bootstrap_after = "myspacevim#after"
+# Enable autocomplete layer
+[[layers]]
+name = 'autocomplete'
+auto-completion-return-key-behavior = "complete"
+auto-completion-tab-key-behavior = "smart"
+
+[[layers]]
+name = 'shell'
+default_position = 'top'
+default_height = 30
+[[layers]]
+    name = "cscope"
+
+[[layers]]
+    name = "ui"
+
+[[layers]]
+    name = "tools"
+
+[[layers]]
+    name = "tags"
+
+[[layers]]
+    name = "checkers"
+    show_cursor_error = false
+
+[[layers]]
+    name = "denite"
+
+#[[layers]]
+#    name = "git"
+
+#[[layers]]
+#    name = "github"
+
+[[layers]]
+    name = "colorscheme"
+
+[[layers]]
+    name = "lang#python"
+
+[[layers]]
+    name = "lang#dockerfile"
+
+[[custom_plugins]]
+    name = "ludovicchabant/vim-gutentags"
+    merged = 0
+
+[[custom_plugins]]
+    name = "skywind3000/gutentags_plus"
+    merged = 0
