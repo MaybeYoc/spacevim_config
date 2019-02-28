@@ -20,5 +20,15 @@ sudo apt-get install automake
 sudo pip install pygments
 sudo pip3 install pygments
 sudo apt-get install exuberant-ctags python-pygments python3-pygments
+sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib build-essential chrpath socat libsdl1.2-dev
 curl -sLf https://spacevim.org/cn/install.sh | bash
-#.globalrc
+cd ~/.
+git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+git config --global user.name "maybe"
+git config --global user.email "378479645@qq.com"
+cp -rf spacevim_config/.SpaceVim.d ~/.
+cp spacevim_config/.ycm_extra_conf.py ~/.
+cp /usr/share/doc/global/examples/gtags.conf.gz ~/.
+zcat gtags.conf.gz > .globalrc
+rm gtags.conf.gz
+rm -rf spacevim_config
