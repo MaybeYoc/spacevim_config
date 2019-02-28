@@ -32,3 +32,8 @@ cp /usr/share/doc/global/examples/gtags.conf.gz ~/.
 zcat gtags.conf.gz > .globalrc
 rm gtags.conf.gz
 rm -rf spacevim_config
+mkdir ~/bin
+curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+chmod a+x ~/bin/repo
+echo export PATH=\~/bin:\$PATH >> ~/.bashrc
+source ~/.bashrc
