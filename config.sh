@@ -33,7 +33,9 @@ zcat gtags.conf.gz > .globalrc
 rm gtags.conf.gz
 rm -rf spacevim_config
 mkdir ~/bin
-curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+git clone https://gerrit-googlesource.lug.ustc.edu.cn/git-repo
+cp git-repo/repo ~/bin/
 chmod a+x ~/bin/repo
 echo export PATH=\~/bin:\$PATH >> ~/.bashrc
 source ~/.bashrc
+@echo "need to completer YCM , git-repo is repo and delete ~/config.sh..."
