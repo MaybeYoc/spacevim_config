@@ -32,4 +32,4 @@ cp /usr/share/doc/global/examples/gtags.conf.gz ~/.
 zcat gtags.conf.gz > .globalrc
 rm gtags.conf.gz
 rm -rf spacevim_config
-@echo "need to completer YCM and delete ~/config.sh..."
+echo "need to completer YCM and delete ~/config.sh..."
